@@ -1,0 +1,125 @@
+/* --- RESET --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+}
+
+:root {
+  --blue-600: rgb(63, 118, 219);
+  --blue-dark-600: rgb(50, 96, 182);
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+  margin: 40px 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ------ */
+
+body {
+  background-color: #f0f0f5;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: #fff;
+  width: 100%;
+  max-width: 480px;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.input-widget {
+  width: 100%;
+  min-height: 60px;
+  height: 60px;
+  resize: vertical;
+  line-height: 1.5;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 16px;
+  outline-color: var(--blue-600);
+  background-color: #fff;
+}
+
+.content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.content form fieldset {
+  border: none;
+  position: relative;
+}
+
+.content form .input-widget:focus + label,
+.content form .input-widget:not(:focus):not(:placeholder-shown) + label {
+  transform: translate(-5px, -27px);
+  font-size: 12px;
+  color: var(--blue-600);
+}
+
+.content form label {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  color: #555;
+  background-color: #fff;
+  padding: 0 6px;
+  transition: all 0.15s;
+  cursor: text;
+}
+
+.content form button {
+  align-self: end;
+  background-color: var(--blue-600);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.content form button:hover {
+  background-color: var(--blue-dark-600);
+}
+
+.content .result-section.hide {
+  display: none;
+}
+
+.text-result {
+  height: 120px;
+}
