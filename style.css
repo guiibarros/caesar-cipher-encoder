@@ -54,6 +54,11 @@ body {
   text-align: center;
 }
 
+section + section {
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+}
+
 .input-widget {
   width: 100%;
   min-height: 60px;
@@ -68,14 +73,24 @@ body {
   background-color: #fff;
 }
 
+.fieldsets {
+  display: flex;
+  gap: 10px;
+}
+
 .content form {
   display: flex;
   flex-direction: column;
 }
 
-.content form fieldset {
+.content form .fieldsets fieldset {
   border: none;
   position: relative;
+  flex: 1
+}
+
+.content form .fieldsets fieldset:first-child {
+  flex: 3
 }
 
 .content form .input-widget:focus + label,

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceasar Cipher Encoder</title>
+    <title>Caesar Cipher Encoder</title>
 
     <link rel="stylesheet" href="./style.css">
     <script defer src='./script.js'></script>
@@ -12,22 +12,47 @@
   <body>
     <div class="container">
       <div class="content">
-        <h1>Ceasar Cipher encoder</h1>
-        <form>
-          <fieldset>
-            <textarea id='text-to-encode' class='input-widget' placeholder=' '></textarea>
-            <label for='text-to-encode'>Text to encode</label>
-          </fieldset>
-          <fieldset>
-            <input class='input-widget' placeholder=' '></input>
-            <label for='text-to-encode'>Offset</label>
-          </fieldset>
-          <button type='submit'>Submit</button>
-        </form>
-        <div class="result-section hide">
-          <h2>Result:</h2>
-          <textarea class='text-result input-widget' disabled></textarea>
-        </div>
+        <h1>Caesar Cipher encoder</h1>
+        <section class="encoder">
+          <h2>Encoder</h2>
+          <form>
+            <div class='fieldsets'>
+              <fieldset>
+                <textarea id='text-to-encode' class='target-text input-widget' placeholder=' '></textarea>
+                <label for='text-to-encode'>Text to encode</label>
+              </fieldset>
+              <fieldset>
+                <input type='number' max='25' min='0' id='offset-encode' class='target-offset input-widget' placeholder=' ' value='3'></input>
+                <label for='offset-encode'>Offset</label>
+              </fieldset>
+            </div>
+            <button type='submit'>Submit</button>
+          </form>
+          <div class="result-section hide">
+            <h2>Result:</h2>
+            <textarea class='result-text input-widget' disabled></textarea>
+          </div>
+        </section>
+        <section class="decoder">
+          <h2>Decoder</h2>
+          <form>
+            <div class='fieldsets'>
+              <fieldset>
+                <textarea id='text-to-decode' class='target-text input-widget' placeholder=' '></textarea>
+                <label for='text-to-decode'>Text to decode</label>
+              </fieldset>
+              <fieldset>
+                <input type='number' max='25' min='0' id='offset-decode' class='target-offset input-widget' placeholder=' ' value='3'></input>
+                <label for='offset-decode'>Offset</label>
+              </fieldset>
+            </div>
+            <button type='submit'>Submit</button>
+          </form>
+          <div class="result-section hide">
+            <h2>Result:</h2>
+            <textarea class='result-text input-widget' disabled></textarea>
+          </div>
+        </section>
       </div>
     </div>
   </body>
